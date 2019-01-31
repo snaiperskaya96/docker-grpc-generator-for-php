@@ -26,3 +26,7 @@ services:
       - path/to/my/protos:/in
       - path/to/my/generated/files:/out
 ```
+
+## Disclaimer
+This is probably not the best image you can get.
+In first place ubuntu could just be replace by alpine and make the image way smaller, in second place the grpc source folder could be deleted and finally there should be no need to either mv files around or make install, but hey, it is what it is.
