@@ -2,7 +2,7 @@
 A docker image that generates gRPC stuff for PHP
 
 ## Why
-I've spent too much time trying to get this to work, so I thought it might be useful for someone else out there
+I've spent too much time trying to get this to work, so I thought it might be useful for someone else out there.
 
 ## Usage
 The container will expect a folder mounted on /in and another folder mounted on /out, where the former contains .proto files and the latter the generated files. The entrypoint argument specifies the .proto file to be parsed.
@@ -10,6 +10,7 @@ The container will expect a folder mounted on /in and another folder mounted on 
 ## Building the image
 `docker build -t grpc-php:latest`
 or just use it within a docker-compose file using the `build` directive instead of `image`
+
 ## Examples
 I personally use it with docker-compose (anti-pattern detected!) but i assume someone could just run this:
 ```bash
@@ -29,4 +30,5 @@ services:
 
 ## Disclaimer
 This is probably not the best image you can get.
-In first place ubuntu could just be replace by alpine and make the image way smaller, in second place the grpc source folder could be deleted and finally there should be no need to either mv files around or make install, but hey, it is what it is.
+
+In first place ubuntu could just be replaced by alpine and make the image way smaller, in second place the grpc source folder could be deleted and finally there should be no need to either mv files around or call make install, but hey, it is what it is.
